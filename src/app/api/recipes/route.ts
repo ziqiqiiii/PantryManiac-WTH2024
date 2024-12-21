@@ -1,21 +1,23 @@
-import openai from "../../utils/openai";
-import { getOrCreateAssistant } from "./assistance";
+import openai from "../../../../utils/openai";
+import { getOrCreateAssistant } from "../assistance/route";
+import type { NextRequest } from "next/server";
 
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
 
+export async function GET(req: NextRequest) {
   try {
+    console.log("Generating recipes... API");
+
     // Step 1: Ensure the Assistant exists
     const assistant = await getOrCreateAssistant();
 
-    // Step 2: Fetch Expiring Ingredients
-    const db = await request.json();
+    // Step 2: Fetch Expiring Ingredients from MongoDB
+    const db = wait.fetch('/dummy_food_data.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
     const collection = db.collection("food_items");
 
     const expiringItems = await collection
-      .find({ expirationDate: { $lte: new Date() } })
+      .find({ "expiry/best-before-date": { $lte: new Date() } })
       .toArray();
 
     const availableIngredients = expiringItems.map((item) => item.name);
@@ -37,13 +39,14 @@ export default async function handler(req, res) {
       ],
     });
 
-    const recipes = JSON.parse(response.choices[0].message.content);
+    const recipes = JSON.parse(response.choices[0].message.content || "[]");
 
-    res.status(200).json({ assistantId: assistant.id, recipes });
+    return Response.json({ assistantId: assistant.id, recipes });
   } catch (error) {
     console.error("Error in recipes API:", error);
-    res.status(500).json({ error: "Failed to generate recipes", details: error.message });
-  } finally {
-    await client.close();
+    return Response.json(
+      { error: "Failed to generate recipes", details: error.message },
+      { status: 500 }
+    );
   }
 }

@@ -22,9 +22,13 @@ export default function Home() {
     setError(null);
 
     try {
-      const response = await fetch('/api/recipes', {
-        method: 'POST',
-      });
+      console.log("Fetching recipes... ahahahhah");
+      const response = await fetch('api/recipes', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
 
       if (!response.ok) {
         throw new Error('Failed to fetch recipes');

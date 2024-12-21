@@ -1,8 +1,9 @@
-import openai from "../../utils/openai";
+import openai from "../../../../utils/openai";
 import fs from "fs";
 import path from "path";
+import type { NextRequest } from 'next/server';
 
-export async function getOrCreateAssistant() {
+async function getOrCreateAssistant() {
   try {
     const filePath = path.resolve("mydata.txt");
     const file = await openai.files.create({
@@ -25,12 +26,23 @@ export async function getOrCreateAssistant() {
         file_ids: [file.id],
       });
     }
-    
+
     console.log("Assistant is ready:", assistant.id);
     return assistant;
   } catch (error) {
     console.error("Error in assistant setup:", error);
     throw new Error("Failed to initialize assistant");
+  }
+}
+
+// API Route Handler
+export async function GET() {
+  try {
+    const assistant = await getOrCreateAssistant();
+    return Response.json({ message: "Assistant is ready", assistantId: assistant.id });
+  } catch (error) {
+    console.error("GET /api/assistance Error:", error);
+    return Response.json({ error: "Failed to initialize assistant", details: error.message }, { status: 500 });
   }
 }
 
