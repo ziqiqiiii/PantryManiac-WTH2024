@@ -1,3 +1,5 @@
+"use client"
+
 import EditableTable from "@/components/editableDatatable";
 import ClientWrapper from "@/components/clientWrapper";
 import Image from "next/image";
