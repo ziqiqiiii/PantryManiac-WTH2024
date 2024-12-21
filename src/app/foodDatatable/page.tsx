@@ -4,33 +4,25 @@ import { FOOD_CATEGORIES } from '@/enums/foodCategories';
 
 export default function Home() {
   const initialData = [
-    { id: 1, name: "Apple", quantity: 10, expiry/best-before-date: 11/12/2025, category: FOOD_CATEGORIES.FRUITS, refrigerated: True},
-    { id: 2, name: "Banana", quantity: 5, price: 0.9 },
-    { id: 3, name: "Cherry", quantity: 20, price: 2.0 },
-    { id: 4, name: "Milk", quantity: 20, price: 2.0 },
-    { id: 5, name: "Coke Zero", quantity: 20, price: 2.0 },
-    { id: 6, name: "Mcdonald", quantity: 20, price: 2.0 },
-    const initialData = [
-      { id: 1, name: "Apple", quantity: 10, price: 1.5, category: "FRUIT" },
-      { id: 2, name: "Broccoli", quantity: 5, price: 2.5, category: "VEGETABLE" },
-    ];
+    { id: 1, name: "Apple", quantity: 10, "expiry/best-before-date": "11/12/2025", category: FOOD_CATEGORIES.FRUITS, refrigerated: true },
+    { id: 2, name: "Broccoli", quantity: 5, "expiry/best-before-date": "11/06/2024", category: FOOD_CATEGORIES.VEGETABLES, refrigerated: true },
   ];
 
   const columns = [
     { label: "ID", field: "id", width: "10%" },
     { label: "Name", field: "name", width: "30%" },
     { label: "Quantity", field: "quantity", width: "20%", type: "number" },
-    { label: "Price", field: "price", width: "20%", type: "number" },
+    { label: "Expiry Date", field: "expiry/best-before-date", width: "20%" },
     {
       label: "Category",
       field: "category",
       width: "20%",
-      enumOptions: Object.entries(FOOD_CATEGORIES).map(([key, value]) => ({
+      enumOptions: Object.values(FOOD_CATEGORIES).map((value) => ({
         label: value,
-        value: key,
+        value,
       })),
     },
-  ];
+    { label: "Refrigerated", field: "refrigerated", width: "20%", type: "boolean" },
   ];
 
   return (
