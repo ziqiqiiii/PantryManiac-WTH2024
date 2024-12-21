@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "name": "Item 1",
+        "quantity": 75,
+        "expiry/best-before-date": "21/01/2033",
+        "category": "Fruits",
+        "refrigerated": true
+    },
+    {
+        "id": 2,
+        "name": "Item 2",
+        "quantity": 20,
+        "expiry/best-before-date": "02/05/2029",
+        "category": "Seafood",
+        "refrigerated": false
+    },
+    {
+        "id": 3,
+        "name": "Item 3",
+        "quantity": 86,
+        "expiry/best-before-date": "01/12/2028",
+        "category": "Dairy",
+        "refrigerated": false
+    },
+    {
+        "id": 4,
+        "name": "Item 4",
+        "quantity": 47,
+        "expiry/best-before-date": "16/07/2033",
+        "category": "Dairy",
+        "refrigerated": false
+    },
+    {
+        "id": 5,
+        "name": "Item 5",
+        "quantity": 7,
+        "expiry/best-before-date": "02/11/2034",
+        "category": "Vegetables",
+        "refrigerated": false
+    },
+    {
+        "id": 6,
+        "name": "Item 6",
+        "quantity": 46,
+        "expiry/best-before-date": "26/11/2027",
+        "category": "Meat",
+        "refrigerated": true
+    },
+    {
+        "id": 7,
+        "name": "Item 7",
+        "quantity": 28,
+        "expiry/best-before-date": "04/09/2026",
+        "category": "Vegetables",
+        "refrigerated": true
+    },
+    {
+        "id": 8,
+        "name": "Item 8",
+        "quantity": 8,
+        "expiry/best-before-date": "25/01/2025",
+        "category": "Snacks",
+        "refrigerated": true
+    },
+    {
+        "id": 9,
+        "name": "Item 9",
+        "quantity": 50,
+        "expiry/best-before-date": "27/04/2031",
+        "category": "Fruits",
+        "refrigerated": false
+    },
+    {
+        "id": 10,
+        "name": "Item 10",
+        "quantity": 95,
+        "expiry/best-before-date": "06/11/2025",
+        "category": "Fruits",
+        "refrigerated": true
+    },
+    {
+        "id": 11,
+        "name": "Item 11",
+        "quantity": 66,
+        "expiry/best-before-date": "06/02/2034",
+        "category": "Seafood",
+        "refrigerated": false
+    },
+    {
+        "id": 12,
+        "name": "Item 12",
+        "quantity": 88,
+        "expiry/best-before-date": "06/01/2033",
+        "category": "Dairy",
+        "refrigerated": true
+    },
+    {
+        "id": 13,
+        "name": "Item 13",
+        "quantity": 68,
+        "expiry/best-before-date": "05/05/2026",
+        "category": "Dairy",
+        "refrigerated": false
+    },
+    {
+        "id": 14,
+        "name": "Item 14",
+        "quantity": 59,
+        "expiry/best-before-date": "19/11/2030",
+        "category": "Vegetables",
+        "refrigerated": false
+    },
+    {
+        "id": 15,
+        "name": "Item 15",
+        "quantity": 29,
+        "expiry/best-before-date": "09/01/2034",
+        "category": "Vegetables",
+        "refrigerated": true
+    },
+    {
+        "id": 16,
+        "name": "Item 16",
+        "quantity": 55,
+        "expiry/best-before-date": "05/12/2031",
+        "category": "Dairy",
+        "refrigerated": false
+    },
+    {
+        "id": 17,
+        "name": "Item 17",
+        "quantity": 26,
+        "expiry/best-before-date": "09/12/2026",
+        "category": "Fruits",
+        "refrigerated": false
+    },
+    {
+        "id": 18,
+        "name": "Item 18",
+        "quantity": 98,
+        "expiry/best-before-date": "22/02/2025",
+        "category": "Fruits",
+        "refrigerated": true
+    },
+    {
+        "id": 19,
+        "name": "Item 19",
+        "quantity": 7,
+        "expiry/best-before-date": "06/12/2033",
+        "category": "Snacks",
+        "refrigerated": false
+    },
+    {
+        "id": 20,
+        "name": "Item 20",
+        "quantity": 17,
+        "expiry/best-before-date": "05/02/2030",
+        "category": "Dairy",
+        "refrigerated": false
+    },
+    {
+        "id": 21,
+        "name": "Item 21",
+        "quantity": 55,
+        "expiry/best-before-date": "20/03/2026",
+        "category": "Meat",
+        "refrigerated": true
+    },
+    {
+        "id": 22,
+        "name": "Item 22",
+        "quantity": 27,
+        "expiry/best-before-date": "07/06/2026",
+        "category": "Meat",
+        "refrigerated": true
+    },
+    {
+        "id": 23,
+        "name": "Item 23",
+        "quantity": 77,
+        "expiry/best-before-date": "02/12/2032",
+        "category": "Snacks",
+        "refrigerated": true
+    },
+    {
+        "id": 24,
+        "name": "Item 24",
+        "quantity": 86,
+        "expiry/best-before-date": "28/05/2032",
+        "category": "Meat",
+        "refrigerated": true
+    },
+    {
+        "id": 25,
+        "name": "Item 25",
+        "quantity": 24,
+        "expiry/best-before-date": "05/03/2029",
+        "category": "Meat",
+        "refrigerated": true
+    },
+    {
+        "id": 26,
+        "name": "Item 26",
+        "quantity": 66,
+        "expiry/best-before-date": "25/12/2024",
+        "category": "Fruits",
+        "refrigerated": true
+    },
+    {
+        "id": 27,
+        "name": "Item 27",
+        "quantity": 22,
+        "expiry/best-before-date": "28/11/2026",
+        "category": "Snacks",
+        "refrigerated": true
+    },
+    {
+        "id": 28,
+        "name": "Item 28",
+        "quantity": 23,
+        "expiry/best-before-date": "02/05/2028",
+        "category": "Vegetables",
+        "refrigerated": true
+    },
+    {
+        "id": 29,
+        "name": "Item 29",
+        "quantity": 19,
+        "expiry/best-before-date": "21/05/2025",
+        "category": "Dairy",
+        "refrigerated": true
+    },
+    {
+        "id": 30,
+        "name": "Item 30",
+        "quantity": 76,
+        "expiry/best-before-date": "29/10/2028",
+        "category": "Snacks",
+        "refrigerated": true
+    },
+    {
+        "id": 31,
+        "name": "Item 31",
+        "quantity": 4,
+        "expiry/best-before-date": "17/07/2033",
+        "category": "Seafood",
+        "refrigerated": false
+    },
+    {
+        "id": 32,
+        "name": "Item 32",
+        "quantity": 56,
+        "expiry/best-before-date": "01/03/2031",
+        "category": "Meat",
+        "refrigerated": true
+    },
+    {
+        "id": 33,
+        "name": "Item 33",
+        "quantity": 3,
+        "expiry/best-before-date": "16/01/2026",
+        "category": "Seafood",
+        "refrigerated": true
+    },
+    {
+        "id": 34,
+        "name": "Item 34",
+        "quantity": 57,
+        "expiry/best-before-date": "14/08/2032",
+        "category": "Snacks",
+        "refrigerated": false
+    },
+    {
+        "id": 35,
+        "name": "Item 35",
+        "quantity": 54,
+        "expiry/best-before-date": "02/10/2033",
+        "category": "Meat",
+        "refrigerated": false
+    },
+    {
+        "id": 36,
+        "name": "Item 36",
+        "quantity": 75,
+        "expiry/best-before-date": "10/12/2032",
+        "category": "Vegetables",
+        "refrigerated": true
+    },
+    {
+        "id": 37,
+        "name": "Item 37",
+        "quantity": 21,
+        "expiry/best-before-date": "24/08/2031",
+        "category": "Seafood",
+        "refrigerated": false
+    },
+    {
+        "id": 38,
+        "name": "Item 38",
+        "quantity": 21,
+        "expiry/best-before-date": "01/05/2029",
+        "category": "Seafood",
+        "refrigerated": false
+    },
+    {
+        "id": 39,
+        "name": "Item 39",
+        "quantity": 50,
+        "expiry/best-before-date": "01/04/2030",
+        "category": "Snacks",
+        "refrigerated": true
+    },
+    {
+        "id": 40,
+        "name": "Item 40",
+        "quantity": 50,
+        "expiry/best-before-date": "28/05/2031",
+        "category": "Fruits",
+        "refrigerated": true
+    },
+    {
+        "id": 41,
+        "name": "Item 41",
+        "quantity": 26,
+        "expiry/best-before-date": "22/05/2033",
+        "category": "Dairy",
+        "refrigerated": true
+    },
+    {
+        "id": 42,
+        "name": "Item 42",
+        "quantity": 18,
+        "expiry/best-before-date": "10/08/2029",
+        "category": "Seafood",
+        "refrigerated": false
+    },
+    {
+        "id": 43,
+        "name": "Item 43",
+        "quantity": 28,
+        "expiry/best-before-date": "26/03/2032",
+        "category": "Fruits",
+        "refrigerated": true
+    },
+    {
+        "id": 44,
+        "name": "Item 44",
+        "quantity": 32,
+        "expiry/best-before-date": "28/04/2033",
+        "category": "Snacks",
+        "refrigerated": false
+    },
+    {
+        "id": 45,
+        "name": "Item 45",
+        "quantity": 71,
+        "expiry/best-before-date": "30/04/2025",
+        "category": "Fruits",
+        "refrigerated": true
+    },
+    {
+        "id": 46,
+        "name": "Item 46",
+        "quantity": 47,
+        "expiry/best-before-date": "13/08/2031",
+        "category": "Fruits",
+        "refrigerated": false
+    },
+    {
+        "id": 47,
+        "name": "Item 47",
+        "quantity": 8,
+        "expiry/best-before-date": "30/12/2025",
+        "category": "Seafood",
+        "refrigerated": false
+    },
+    {
+        "id": 48,
+        "name": "Item 48",
+        "quantity": 49,
+        "expiry/best-before-date": "19/10/2026",
+        "category": "Vegetables",
+        "refrigerated": false
+    },
+    {
+        "id": 49,
+        "name": "Item 49",
+        "quantity": 58,
+        "expiry/best-before-date": "20/02/2025",
+        "category": "Meat",
+        "refrigerated": true
+    },
+    {
+        "id": 50,
+        "name": "Item 50",
+        "quantity": 13,
+        "expiry/best-before-date": "04/06/2030",
+        "category": "Snacks",
+        "refrigerated": false
+    }
+]

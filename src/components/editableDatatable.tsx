@@ -1,5 +1,7 @@
 'use client';
-import React, { useState } from "react";
+
+import React, { useState, ChangeEvent } from "react";
+
 import {
   Table,
   TableBody,
@@ -12,22 +14,27 @@ import {
   Button,
 } from "@mui/material";
 
-const EditableTable = () => {
-  // Sample data
-  const initialData = [
-    { id: 1, name: "Apple", quantity: 10, price: 1.5 },
-    { id: 2, name: "Banana", quantity: 5, price: 0.9 },
-    { id: 3, name: "Cherry", quantity: 20, price: 2.0 },
-  ];
+interface Column {
+  label: string;
+  field: string;
+  width?: string;
+  type?: string;
+}
 
+interface EditableTableProps {
+  initialData: Record<string, any>[];
+  columns: Column[];
+}
+
+const EditableTable: React.FC<EditableTableProps> = ({ initialData, columns }) => {
   // State for table data
   const [data, setData] = useState(initialData);
 
   // State for editing
-  const [editIdx, setEditIdx] = useState(null);
+  const [editIdx, setEditIdx] = useState<number | null>(null);
 
   // Handle input changes
-  const handleInputChange = (e: any, rowIdx: number, field: number) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>, rowIdx: number, field: string) => {
     const updatedData = [...data];
     updatedData[rowIdx][field] = e.target.value;
     setData(updatedData);
@@ -50,52 +57,34 @@ const EditableTable = () => {
       <Table stickyHeader style={{ tableLayout: "fixed" }}>
         <TableHead>
           <TableRow>
-            <TableCell style={{ height: 70,  width: "10%"}}>ID</TableCell>
-            <TableCell style={{ height: 70,  width: "30%"}}>Name</TableCell>
-            <TableCell style={{ height: 70,  width: "20%"}}>Quantity</TableCell>
-            <TableCell style={{ height: 70,  width: "20%"}}>Price</TableCell>
-            <TableCell style={{ height: 70,  width: "20%"}}>Actions</TableCell>
+            {columns.map((column, idx) => (
+              <TableCell key={idx} style={{ height: 70, width: column.width || "auto" }}>
+                {column.label}
+              </TableCell>
+            ))}
+            <TableCell style={{ height: 70, width: "20%" }}>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((row, rowIdx) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.id}</TableCell>
-              <TableCell>
-                {editIdx === rowIdx ? (
-                  <TextField
-                    value={row.name}
-                    onChange={(e) => handleInputChange(e, rowIdx, "name")}
-                    fullWidth
-                  />
-                ) : (
-                  row.name
-                )}
-              </TableCell>
-              <TableCell>
-                {editIdx === rowIdx ? (
-                  <TextField
-                    value={row.quantity}
-                    type="number"
-                    onChange={(e) => handleInputChange(e, rowIdx, "quantity")}
-                    fullWidth
-                  />
-                ) : (
-                  row.quantity
-                )}
-              </TableCell>
-              <TableCell>
-                {editIdx === rowIdx ? (
-                  <TextField
-                    value={row.price}
-                    type="number"
-                    onChange={(e) => handleInputChange(e, rowIdx, "price")}
-                    fullWidth
-                  />
-                ) : (
-                  row.price
-                )}
-              </TableCell>
+            <TableRow key={rowIdx}>
+              {columns.map((column, colIdx) => (
+                <TableCell
+                  key={colIdx}
+                  style={{ height: 95, width: "20%" }}
+                >
+                  {editIdx === rowIdx ? (
+                    <TextField
+                      value={row[column.field]}
+                      type={column.type || "text"}
+                      onChange={(e) => handleInputChange(e, rowIdx, column.field)}
+                      fullWidth
+                    />
+                  ) : (
+                    row[column.field]
+                  )}
+                </TableCell>
+              ))}
               <TableCell>
                 <Button
                   variant="contained"
@@ -114,3 +103,4 @@ const EditableTable = () => {
 };
 
 export default EditableTable;
+
