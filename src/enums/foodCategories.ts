@@ -10,6 +10,6 @@ export enum FOOD_CATEGORIES {
     BREAD_N_BAKERY      =	'Bread and Bakery',
     BEVERAGES           =	'Beverages',
     RICE_NOODLE_CEREAL  =	'Rice, Noodle, and Cereal',
-    BAKING              = 'Baking'
+    BAKING              = 'Baking',
     FROZEN_FOODS        =	'Frozen foods'
   }
