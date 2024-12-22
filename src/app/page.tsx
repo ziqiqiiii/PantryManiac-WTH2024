@@ -1,4 +1,4 @@
-import EditableTable from "@/components/editableDatatable";
+import EditableTable from "@/components/editableTable";
 import ClientWrapper from "@/components/clientWrapper";
 
 export default function Home() {
