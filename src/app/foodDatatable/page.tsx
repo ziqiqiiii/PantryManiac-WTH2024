@@ -1,8 +1,9 @@
 "use client";
 
-import EditableTable from "@/components/editableDatatable";
+import EditableTable from "@/components/editableTable";
 import ClientWrapper from "@/components/clientWrapper";
 import { FOOD_CATEGORIES } from "@/enums/foodCategories";
+
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -50,12 +51,34 @@ export default function Home() {
     fetchData();
   }, []);
 
+  const handleSave = async (updatedData) => {
+    try {
+      const response = await fetch("api/saveDataTable", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedData),
+      });
+
+      if (response.ok) {
+        alert("Data saved successfully!");
+      } else {
+        alert("Failed to save data.");
+      }
+    } catch (error) {
+      console.error("Error saving data:", error);
+      alert("An error occurred while saving.");
+    }
+  };
+
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <ClientWrapper>
-          <EditableTable columns={columns} initialData={initialData}/>
-        </ClientWrapper>  
+          <EditableTable columns={columns} initialData={initialData} onSave={handleSave}/>
+        </ClientWrapper>
       </main>
     </div>
   );
